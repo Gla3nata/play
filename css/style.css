@@ -5,19 +5,20 @@
 
 body {
     margin: 0 auto;
-    min-width: 1920px;
+    width: 1920px;
     background-color: #510b03;
     font-size: 24px;
     font-family: "lora-regular";
     color: rgb(238, 238, 238);
     line-height: 1.5;
-    /*    text-align: center;*/
 }
 
-.box {
+.page-header {
+    background-image: url(../img/1_HEADER/1_HEADER_bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    min-height: 966px;
+    margin: 0;
 }
 
 .header-main {
@@ -30,13 +31,6 @@ body {
 .logo {
     display: block;
     margin: 0 aut;
-}
-
-.page-header {
-    background-image: url(../img/1_HEADER/1_HEADER_bg.jpg);
-    min-height: 966px;
-      background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .head-img {
@@ -86,6 +80,7 @@ body {
     height: 66px;
     font-size: 45px;
     line-height: 108px;
+    margin-top: 20px;
 }
 
 .button-scroll:hover {
@@ -106,7 +101,10 @@ body {
 
 .chars {
     min-height: 949px;
-   
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 966px;
+    margin: 0;
 }
 
 .slider {
@@ -119,7 +117,7 @@ body {
     background: url(../img/BTN_scroll_normal.png);
     display: block;
     background-repeat: no-repeat;
-/*    background-size: 100% auto;*/
+    /*    background-size: 100% auto;*/
     background-size: cover;
     width: 102px;
     height: 66px;
@@ -179,11 +177,11 @@ body {
 
 
 .video {
-    /*    border: 1px solid red;*/
-    background: url(../img/3_VIDEO/3_VIDEO_shadow_top.png);
     min-height: 856px;
     position: relative;
-
+      background: url(../img/3_VIDEO/3_VIDEO_shadow_top.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .advantage-head {
@@ -195,8 +193,9 @@ body {
 
 .video-file {
     width: 100%;
-    height: 100v;
+    height: 100%;
     object-fit: cover;
+
 }
 
 .text-video {
@@ -256,10 +255,11 @@ body {
 }
 
 footer {
-    min-height: 900px;
     background: url(../img/5_FOOTER/5_FOOTER_BG.jpg);
-    background-size: cover;
+    min-height: 900px;
     background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
 }
 
 .footer-content {
