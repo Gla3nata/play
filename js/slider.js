@@ -1,7 +1,7 @@
 var pictures = [
-        "url(../promo/promo/2_CHARS/2_CHARS_bg_Isolda.jpg)",
-        "url(../promo/promo/2_CHARS/2_CHARS_bg_Lleyn.jpg)",
-        "url(../promo/promo/2_CHARS/2_CHARS_bg_Pamela.jpg)"
+        "url(img/2_CHARS/2_CHARS_bg_Isolda.jpg)",
+        "url(img/2_CHARS/2_CHARS_bg_Lleyn.jpg)",
+        "url(img/2_CHARS/2_CHARS_bg_Pamela.jpg)"
     ];
 
 var currentPosition = 0;
