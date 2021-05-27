@@ -33,7 +33,7 @@ body {
 }
 
 .page-header {
-    background-image: url(../../promo/promo/1_HEADER/1_HEADER_bg.jpg);
+    background-image: url(../img/1_HEADER/1_HEADER_bg.jpg);
     min-height: 966px;
       background-repeat: no-repeat;
     background-size: cover;
@@ -47,7 +47,7 @@ body {
 .button-play {
     border: 1px solid transparent;
     text-decoration: none;
-    background: url(../../promo/promo/BTN_play_normal.png);
+    background: url(../img/BTN_play_normal.png);
     display: block;
     margin: 0 auto;
     background-repeat: no-repeat;
@@ -60,11 +60,11 @@ body {
 }
 
 .button-play:hover {
-    background: url(../../promo/promo/BTN_play_hover.png);
+    background: url(../img/BTN_play_hover.png);
 }
 
 .button-play:active {
-    background: url(../../promo/promo/BTN_play_active.png);
+    background: url(../img/BTN_play_active.png);
 }
 
 .text-block {
@@ -76,7 +76,7 @@ body {
 .button-scroll {
     border: 1px solid transparent;
     text-decoration: none;
-    background: url(../../promo/promo/BTN_scroll_normal.png);
+    background: url(../img/BTN_scroll_normal.png);
     display: block;
     margin: 0 auto;
     background-repeat: no-repeat;
@@ -89,11 +89,11 @@ body {
 }
 
 .button-scroll:hover {
-    background: url(../../promo/promo/BTN_scroll_hover.png);
+    background: url(../img/BTN_scroll_hover.png);
 }
 
 .button-scroll:active {
-    background: url(../../promo/promo/BTN_scroll_active.png);
+    background: url(../img/BTN_scroll_active.png);
 }
 
 #left {
@@ -106,7 +106,7 @@ body {
 
 .chars {
     min-height: 949px;
-    /*    background-image: url(../promo/promo/2_CHARS/2_CHARS_bg_Lleyn.jpg);*/
+   
 }
 
 .slider {
@@ -116,7 +116,7 @@ body {
 
 .button-slider {
     text-decoration: none;
-    background: url(../../promo/promo/BTN_scroll_normal.png);
+    background: url(../img/BTN_scroll_normal.png);
     display: block;
     background-repeat: no-repeat;
 /*    background-size: 100% auto;*/
@@ -180,7 +180,7 @@ body {
 
 .video {
     /*    border: 1px solid red;*/
-    background: url(../../promo/promo/3_VIDEO/3_VIDEO_shadow_top.png);
+    background: url(../img/3_VIDEO/3_VIDEO_shadow_top.png);
     min-height: 856px;
     position: relative;
 
@@ -236,7 +236,7 @@ body {
 }
 
 .mount {
-    background: url(../../promo/promo/4_MOUNT/4_MOUNT_bg.jpg);
+    background: url(../img/4_MOUNT/4_MOUNT_bg.jpg);
     min-height: 993px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -257,7 +257,7 @@ body {
 
 footer {
     min-height: 900px;
-    background: url(../../promo/promo/5_FOOTER/5_FOOTER_BG.jpg);
+    background: url(../img/5_FOOTER/5_FOOTER_BG.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -279,62 +279,62 @@ footer {
     width: 83px;
     height: 91px;
     text-decoration: none;
-    background: url(../../promo/promo/5_FOOTER/5_FOOTER_btn_fb_normal.png);
+    background: url(../img/5_FOOTER/5_FOOTER_btn_fb_normal.png);
     background-repeat: no-repeat;
     background-size: 100% auto;
 }
 
 .fb:hover {
-    background: url(../../promo/promo/5_FOOTER/5_FOOTER_btn_fb_hover.png);
+    background: url(../img/5_FOOTER/5_FOOTER_btn_fb_hover.png);
 }
 
 .fb:active {
-    background: url(../../promo/promo/5_FOOTER/5_FOOTER_btn_fb_active.png);
+    background: url(../img/5_FOOTER/5_FOOTER_btn_fb_active.png);
 }
 
 .mail {
     display: block;
     width: 83px;
     height: 91px;
-    background: url(../../promo/promo/5_FOOTER/5_FOOTER_btn_mail_normal.png);
+    background: url(../img/5_FOOTER/5_FOOTER_btn_mail_normal.png);
 }
 
 .mail:hover {
-    background: url(../../promo/promo/5_FOOTER/5_FOOTER_btn_mail_hover.png);
+    background: url(../img/5_FOOTER/5_FOOTER_btn_mail_hover.png);
 }
 
 .mail:active {
-    background: url(../../promo/promo/5_FOOTER/5_FOOTER_btn_mail_active.png);
+    background: url(../img/5_FOOTER/5_FOOTER_btn_mail_active.png);
 }
 
 .ok {
     display: block;
     width: 83px;
     height: 91px;
-    background: url(../../promo/promo/5_FOOTER/5_FOOTER_btn_ok_normal.png);
+    background: url(../img/5_FOOTER/5_FOOTER_btn_ok_normal.png);
 }
 
 .ok:hover {
-    background: url(../../promo/promo/5_FOOTER/5_FOOTER_btn_ok_hover.png);
+    background: url(../img/5_FOOTER/5_FOOTER_btn_ok_hover.png);
 }
 
 .ok:active {
-    background: url(../../promo/promo/5_FOOTER/5_FOOTER_btn_ok_active.png);
+    background: url(../img/5_FOOTER/5_FOOTER_btn_ok_active.png);
 }
 
 .vk {
     display: block;
     width: 83px;
     height: 91px;
-    background: url(../../promo/promo/5_FOOTER/5_FOOTER_btn_vk_normal.png);
+    background: url(../img/5_FOOTER/5_FOOTER_btn_vk_normal.png);
 }
 
 .vk:hover {
-    background: url(../../promo/promo/5_FOOTER/5_FOOTER_btn_vk_hover.png);
+    background: url(../img/5_FOOTER/5_FOOTER_btn_vk_hover.png);
 }
 
 .vk:active {
-    background: url(../../promo/promo/5_FOOTER/5_FOOTER_btn_vk_active.png);
+    background: url(../img/5_FOOTER/5_FOOTER_btn_vk_active.png);
 }
 
 .play-txt {
