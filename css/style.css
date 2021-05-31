@@ -106,6 +106,7 @@ body {
     background-repeat: no-repeat;
     min-height: 966px;
     margin: 0;
+    position: relative;
 }
 
 .slider {
@@ -137,13 +138,11 @@ body {
 }
 
 .chars-content-head {
-
     margin-top: -50px;
-
 }
 
 .hero-name {
-    margin-top: -100px;
+    margin: -70px 0px 0px -55px;
 }
 
 .hero-title {
