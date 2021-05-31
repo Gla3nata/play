@@ -17,8 +17,8 @@ body {
     background-image: url(../img/1_HEADER/1_HEADER_bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-/*    min-height: 966px;*/
-  height: 100%;
+    /*    min-height: 966px;*/
+    height: 100%;
     margin: 0;
 }
 
@@ -111,6 +111,9 @@ body {
 .slider {
     display: flex;
     justify-content: space-between;
+    position: absolute;
+    width: 95%;
+    top: 335px;
 }
 
 .button-slider {
@@ -133,7 +136,15 @@ body {
     margin: 0 20%;
 }
 
-.chars-content-head {}
+.chars-content-head {
+
+    margin-top: -50px;
+
+}
+
+.hero-name {
+    margin-top: -100px;
+}
 
 .hero-title {
     font-size: 21px;
@@ -154,6 +165,8 @@ body {
 .skills {
     display: flex;
 }
+
+.icon-pagination {}
 
 .icon-skills {
     display: block;
@@ -180,7 +193,7 @@ body {
 .video {
     min-height: 856px;
     position: relative;
-      background: url(../img/3_VIDEO/3_VIDEO_shadow_top.png);
+    background: url(../img/3_VIDEO/3_VIDEO_shadow_top.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
