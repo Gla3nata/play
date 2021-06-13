@@ -5,7 +5,9 @@
 
 body {
     margin: 0 auto;
-    width: 1920px;
+/*    width: 1920px;  */
+    
+    width: 100%;
     background-color: #510b03;
     font-size: 24px;
     font-family: "lora-regular";
@@ -147,7 +149,6 @@ body {
 
 .hero-title {
     font-size: 21px;
-    color: rgb(255, 196, 25);
     line-height: 1.333;
     text-align: left;
     text-shadow: 0px 5px 30px rgba(35, 27, 32, 0.004);
@@ -165,7 +166,42 @@ body {
     display: flex;
 }
 
-.icon-pagination {}
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    flex-direction:column;
+}
+
+/*
+.carusel-pagination {
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+    color: red;
+}
+*/
+
+.carusel-pagination-item {
+    display: block;
+    width: 140px;
+    height: 140px;
+    background: url(../img/2_CHARS/2_CHARS_icon_Lleyn_inactive.png) ;
+    border-radius: 50%;
+}
+
+.carusel-pagination-item:hover {
+     background: url(../img/2_CHARS/2_CHARS_icon_Lleyn_hover.png) ;
+    width: 140px;
+    height: 140px;
+}
+
+.carusel-pagination-active {
+    display: block;
+    width: 140px;
+    height: 140px;
+    background: url(../img/2_CHARS/2_CHARS_icon_Lleyn_active.png) ;
+    border-radius: 50%;
+}
 
 .icon-skills {
     display: block;
