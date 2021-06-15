@@ -1,10 +1,12 @@
 class Hero {
-    constructor(heroHead, background, heroTitle, descriptionHero, skills) {
+    constructor(heroHead, background, heroTitle, descriptionHero, skills, gopa) {
         this.heroHead = heroHead;
         this.background = background;
         this.heroTitle = heroTitle;
         this.descriptionHero = descriptionHero;
         this.skills = skills;
+        this.icon = gopa;
+
     }
 }
 
@@ -31,6 +33,14 @@ class Skill {
     }
 }
 
+class Icon {
+    constructor(inactive, hover, active) {
+        this.inactive = inactive;
+        this.hover = hover;
+        this.active = active;
+    }
+}
+
 var heroes = [
     new Hero(
         new HeroHead(
@@ -48,7 +58,12 @@ var heroes = [
             new Skill(
                 'img/2_CHARS/2_CHARS_skill_Isolda_2.png', 'Морозная ария', 'Ледяной щит уменьшает получаемый урон на 20%'
             )
-        ]
+        ],
+        new Icon(
+            'url(../img/2_CHARS/2_CHARS_icon_Isolda_inactive.png)',
+            'url(../img/2_CHARS/2_CHARS_icon_Isolda_hover.png)',
+            'url(../img/2_CHARS/2_CHARS_icon_Isolda_active.png)'
+        )
     ),
     new Hero(
         new HeroHead(
@@ -67,7 +82,12 @@ var heroes = [
                 'img/2_CHARS/2_CHARS_skill_Lleyn_2.png', 'Найти и уничтожить', 'Наносит 313% урона врагу'
             )
 
-            ]
+            ],
+        new Icon(
+            'url(../img/2_CHARS/2_CHARS_icon_Lleyn_inactive.png)',
+            'url(../img/2_CHARS/2_CHARS_icon_Lleyn_hover.png)',
+            'url(../img/2_CHARS/2_CHARS_icon_Lleyn_active.png)'
+        )
     ),
     new Hero(
         new HeroHead(
@@ -85,7 +105,12 @@ var heroes = [
         new Skill(
                 'img/2_CHARS/2_CHARS_skill_Pamela_2.png', 'Проклятие дракона', 'Проклинает всех врагов, снижая урон на 15%'
             )
-            ]
+            ],
+        new Icon(
+            'url(../img/2_CHARS/2_CHARS_icon_Pamela_inactive.png)',
+            'url(../img/2_CHARS/2_CHARS_icon_Pamela_hover.png)',
+            'url(../img/2_CHARS/2_CHARS_icon_Pamela_active.png)'
+        )
     )
 ];
 
@@ -93,21 +118,14 @@ var currentPosition = 0;
 var maxIndex = heroes.length - 1;
 
 showHero(heroes[currentPosition]);
+createPagination(heroes, currentPosition);
+
 
 var left = document.querySelector('#left');
 left.onclick = changePicture;
 
 var right = document.querySelector('#right');
 right.onclick = changePicture;
-
-let pagination = document.querySelector(".pagination");
-
-for (let pos = 0; pos < heroes.length; pos++) {
-    let link = document.createElement("a");
-    link.className = 'carusel-pagination-item'
-    link.onclick = () => changeClass(pos);
-    pagination.appendChild(link);
-}
 
 function changePicture(event) {
     switch (event.target) {
@@ -124,6 +142,8 @@ function changePicture(event) {
 
 
 function showHero(hero) {
+
+    //    var hero = heroes[currentPosition];
     document.querySelector('.chars').style.backgroundImage = hero.background;
 
     var heroHead = document.querySelector('.hero-name');
@@ -141,7 +161,6 @@ function showHero(hero) {
     descriptionHero.innerHTML = hero.descriptionHero;
 
     var skills = document.getElementsByClassName('skills');
-    //    console.log(skills);
 
     for (var i = 0; i < skills.length; i++) {
         var skill = skills[i];
@@ -150,19 +169,64 @@ function showHero(hero) {
             if (node.className == 'icon-skills') {
                 node.src = hero.skills[i].icon;
             } else if (node.className == 'skills-content') {
-                //                console.log('this ', node.childNodes);
-
                 node.childNodes.forEach(function (item) {
 
                     if (item.className == 'skills-title') {
                         item.innerHTML = hero.skills[i].title;
                     } else if (item.className == 'skills-text') {
-                      
+
                         item.innerHTML = hero.skills[i].desc;
                     }
                 });
             }
-
         });
+    }
+
+
+
+}
+
+
+function createPagination(heroes, currentPosition) {
+
+    let pagination = document.querySelector(".pagination");
+
+
+    for (let pos = 0; pos < heroes.length; pos++) {
+        let link = document.createElement('a');
+        link.href = '#';
+        link.className = 'carusel-pagination-item'
+
+        link.onclick = () => reInit(link, pos, currentPosition, heroes[pos]);
+
+        link.addEventListener(
+            "mouseover",
+            () => link.style.backgroundImage = heroes[pos].icon.hover,
+            false
+        );
+
+        link.addEventListener(
+            "mouseout",
+            () => link.style.backgroundImage = heroes[pos].icon.inactive,
+            false
+        );
+
+        pagination.appendChild(link);
+
+        initActive(link, pos, currentPosition, heroes[pos]);
+    }
+}
+
+function reInit(link, pos, currentPos, hero) {
+    showHero(hero);
+    initActive(link, pos, currentPosition, heroes[pos]);
+}
+
+function initActive(link, pos, currentPos, hero) {
+    console.log(currentPosition);
+    if (pos == currentPosition) {
+        link.style.backgroundImage = hero.icon.active;
+    } else {
+        link.style.backgroundImage = heroes[pos].icon.inactive;
     }
 }

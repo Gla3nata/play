@@ -185,23 +185,19 @@ body {
     display: block;
     width: 140px;
     height: 140px;
-    background: url(../img/2_CHARS/2_CHARS_icon_Lleyn_inactive.png) ;
+/*    background: url(../img/2_CHARS/2_CHARS_icon_Isolda_inactive.png) ;*/
     border-radius: 50%;
 }
 
+/*
 .carusel-pagination-item:hover {
-     background: url(../img/2_CHARS/2_CHARS_icon_Lleyn_hover.png) ;
-    width: 140px;
-    height: 140px;
+     background-color: aqua;
 }
 
-.carusel-pagination-active {
-    display: block;
-    width: 140px;
-    height: 140px;
-    background: url(../img/2_CHARS/2_CHARS_icon_Lleyn_active.png) ;
-    border-radius: 50%;
+.carusel-pagination-item:active {
+    background: url(../img/2_CHARS/2_CHARS_icon_Isolda_active.png) ;
 }
+*/
 
 .icon-skills {
     display: block;
